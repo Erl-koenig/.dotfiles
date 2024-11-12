@@ -5,12 +5,12 @@ return {
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
     local lualine_nightfly = require("lualine.themes.nightfly")
-    
+
     local colors = {
       blue = "#65D1FF",
       green = "#3EFFDC",
       violet = "#FF61EF",
-      yellow = "#FFDA7B",  
+      yellow = "#FFDA7B",
       black = "#000000",
       red = "#FF4A4A",
       fg = "#c3ccdc",
@@ -19,16 +19,16 @@ return {
     }
 
     -- change nightlfy theme colors
-lualine_nightfly.normal.a.bg = colors.blue
-lualine_nightfly.insert.a.bg = colors.green
-lualine_nightfly.visual.a.bg = colors.violet
-lualine_nightfly.command = {
-  a = {
-    gui = "bold",
-    bg = colors.yellow,
-    fg = colors.black, -- black
-  },
-}
+    lualine_nightfly.normal.a.bg = colors.blue
+    lualine_nightfly.insert.a.bg = colors.green
+    lualine_nightfly.visual.a.bg = colors.violet
+    lualine_nightfly.command = {
+      a = {
+        gui = "bold",
+        bg = colors.yellow,
+        fg = colors.black, -- black
+      },
+    }
 
     local my_lualine_theme = {
       normal = {
@@ -86,6 +86,7 @@ lualine_nightfly.command = {
         },
       },
     })
-    ]]--
+    ]]
+    --
   end,
 }

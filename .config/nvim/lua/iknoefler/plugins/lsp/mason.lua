@@ -28,6 +28,7 @@ return {
         "lua_ls",
         "graphql",
         "emmet_ls",
+        "ts_ls",
         "prismals",
         "pyright",
         "hls",
