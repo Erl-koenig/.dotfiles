@@ -1,5 +1,15 @@
 return {
   {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = function()
+      return {
+        transparent = false,
+      }
+    end,
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
     config = function()
@@ -8,8 +18,7 @@ return {
           transparent = true,
         },
       })
-
-      -- vim.cmd("colorscheme rose-pine")
+      vim.cmd("colorscheme solarized-osaka")
     end,
   },
   {
@@ -34,8 +43,6 @@ return {
         borderless_telescope = { border = false, style = "flat" },
         theme = { variant = "auto" },
       })
-
-      vim.cmd("colorscheme cyberdream")
     end,
   },
   {
