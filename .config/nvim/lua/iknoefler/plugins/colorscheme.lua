@@ -18,6 +18,7 @@ return {
           transparent = true,
         },
       })
+
       vim.cmd("colorscheme solarized-osaka")
     end,
   },

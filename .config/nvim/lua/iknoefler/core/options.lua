@@ -19,6 +19,9 @@ opt.wrap = false
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
+-- disable command line bar
+vim.opt.cmdheight = 0
+
 -- cursor line
 opt.cursorline = true
 

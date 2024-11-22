@@ -11,6 +11,13 @@
 ;; (add-hook 'emacs-startup-hook 'org-agenda-list)
 (setq org-agenda-max-todos nil)
 
+;; disable evil-snipe 
+(after! evil-snipe
+  (evil-snipe-mode -1))
+
+;; Bind s to evil-substitute and S to evil-change-whole-line (like in Vim)
+(evil-define-key 'normal 'global (kbd "s") 'evil-substitute)
+(evil-define-key 'normal 'global (kbd "S") 'evil-change-whole-line)
 
 (custom-set-faces
  '(org-todo ((t (:foreground "orange" :weight bold :box (:line-width 1 :color "orange")))))
