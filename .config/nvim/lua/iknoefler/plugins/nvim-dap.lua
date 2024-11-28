@@ -23,6 +23,7 @@ return {
       command = "/usr/local/Cellar/llvm/18.1.8/bin/lldb-dap",
       name = "lldb",
     }
+    local dap = require("dap")
 
     dap.configurations.cpp = {
       {

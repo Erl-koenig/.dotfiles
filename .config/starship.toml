@@ -1,0 +1,53 @@
+format = """
+[╭](fg:current_line)\
+$directory\
+$git_branch\
+$fill\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+palette = 'catppuccin'
+add_newline = true
+
+[palettes.catppuccin]
+foreground = '#cdd6f4'
+background = '#1e1e2e'
+current_line = '#404040'
+primary = '#1E1F29'
+box = '#404040'
+red = '#f38ba8'
+green = '#a6e3a1'
+yellow = '#f9e2af'
+blue = '#89b4fa'
+purple = '#cba6f7'
+cyan = '#89dceb'
+pink = '#f5c2e7'
+orange = '#eba0ac'
+
+[directory]
+format = '[─](fg:current_line)[](fg:blue)[󰷏 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+truncation_length = 0
+
+[git_branch]
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)[](fg:box)'
+symbol = ' '
+
+[fill]
+symbol = '─'
+style = 'fg:current_line'
+
+[cmd_duration]
+min_time = 500
+format = '[─](fg:current_line)[](fg:orange)[󰔛 ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
+
+[character]
+format = """
+[╰─$symbol](fg:current_line) """
+success_symbol = "[\\[I\\]](bold green)"
+error_symbol = "[\\[I\\]](bold green)"
+vicmd_symbol = "[\\[N\\]](bold blue)"
+vimcmd_replace_one_symbol = "[\\[R\\]](bold red)"
+vimcmd_replace_symbol = "[\\[R\\]](bold red)"
+vimcmd_visual_symbol = "[\\[V\\]](bold yellow)"

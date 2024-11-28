@@ -1,5 +1,10 @@
 return {
   {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = true,
+  },
+  {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
     priority = 1000,
@@ -8,27 +13,6 @@ return {
         transparent = false,
       }
     end,
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup({
-        styles = {
-          transparent = true,
-        },
-      })
-
-      vim.cmd("colorscheme solarized-osaka")
-    end,
-  },
-  {
-    "catppuccin/nvim",
-    opts = {
-      transparent_background = true,
-    },
-    name = "catppuccin",
-    priority = 1000,
   },
   {
     "scottmckendry/cyberdream.nvim",
@@ -103,7 +87,7 @@ return {
       })
 
       -- setup must be called before loading
-      -- vim.cmd("colorscheme kanagawa")
+      vim.cmd("colorscheme gruvbox")
     end,
   },
 }
