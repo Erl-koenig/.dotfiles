@@ -39,15 +39,24 @@ function fcd
     end
 end
 
+
+alias c="clear" 
+
 # ---- Eza (better ls) -----
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
+# ---- yazi -----
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
 # ---- Bat (better cat) -----
 set -x BAT_THEME tokyonight_night
-
-# ---- Thefuck -----
-thefuck --alias | source 
-alias fk="fuck"
 
 # ---- Zoxide (better cd) -----
 zoxide init fish | source
