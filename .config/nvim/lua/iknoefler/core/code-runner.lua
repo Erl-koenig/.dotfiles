@@ -40,9 +40,9 @@ local function action_by_filetype(action)
   -- C
   elseif filetype == "c" then
     if action == "run" then
-      current_file_dir("clang -O2 -std=c++23 " .. file_title .. " -o " .. output .. " -lm" .. " && ./" .. output)
+      current_file_dir("clang -O2 " .. file_title .. " -o " .. output .. " -lm" .. " && ./" .. output)
     elseif action == "compile" then
-      current_file_dir("clang -O2 -std=c++23 " .. file_title .. " -o " .. output .. " -lm" .. " && ./" .. output)
+      current_file_dir("clang -O2 " .. file_title .. " -o " .. output .. " -lm" .. " && ./" .. output)
     end
 
   -- C++

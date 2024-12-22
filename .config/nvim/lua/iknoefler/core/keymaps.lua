@@ -4,8 +4,8 @@ local keymap = vim.keymap
 
 -- general keymaps
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("x", "<leader>p", [["_dP]]) -- paste without changing register
+keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "x", '"_x', { desc = "Delete character" }) -- without changing register
 

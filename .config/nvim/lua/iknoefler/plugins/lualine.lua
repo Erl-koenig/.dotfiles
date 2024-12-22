@@ -7,7 +7,9 @@ return {
     local lualine_nightfly = require("lualine.themes.nightfly")
 
     local colors = {
-      blue = "#65D1FF",
+      -- blue = "#65D1FF",
+      blue = "#7fb4ca",
+      purple = "#957fb8",
       green = "#3EFFDC",
       violet = "#FF61EF",
       yellow = "#FFDA7B",
@@ -19,7 +21,8 @@ return {
     }
 
     -- change nightlfy theme colors
-    lualine_nightfly.normal.a.bg = colors.blue
+    -- lualine_nightfly.normal.a.bg = colors.blue
+    lualine_nightfly.normal.a.bg = colors.purple
     lualine_nightfly.insert.a.bg = colors.green
     lualine_nightfly.visual.a.bg = colors.violet
     lualine_nightfly.command = {
@@ -32,7 +35,8 @@ return {
 
     local my_lualine_theme = {
       normal = {
-        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        -- a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        a = { bg = colors.purple, fg = colors.bg, gui = "bold" },
         b = { bg = colors.bg, fg = colors.fg },
         c = { bg = colors.bg, fg = colors.fg },
       },

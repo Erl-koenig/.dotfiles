@@ -8,26 +8,24 @@ $line_break\
 $character\
 """
 
-palette = 'catppuccin'
+palette = 'kanagawa'
 add_newline = true
 
-[palettes.catppuccin]
-foreground = '#cdd6f4'
-background = '#1e1e2e'
-current_line = '#404040'
-primary = '#1E1F29'
-box = '#404040'
-red = '#f38ba8'
-green = '#a6e3a1'
-yellow = '#f9e2af'
-blue = '#89b4fa'
-purple = '#cba6f7'
-cyan = '#89dceb'
-pink = '#f5c2e7'
-orange = '#eba0ac'
+[palettes.kanagawa]
+foreground = '#dcd7ba'
+background = '#1f1f28'
+current_line = '#363646'
+primary = '#2a2a37'
+box = '#363646'
+red = '#e46876'
+green = '#98bb6c'
+yellow = '#dca561'
+blue = '#7fb4ca'
+purple = '#957fb8'
+orange = '#ffa066'
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰷏 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:purple)[󰷏 ](fg:primary bg:purple)[](fg:purple bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
 truncation_length = 0
 
 [git_branch]
