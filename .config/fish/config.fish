@@ -5,7 +5,7 @@ end
 set fish_greeting
 
 # Vim key bindings enabled by default
-# fish_hybrid_key_bindings
+fish_hybrid_key_bindings
 
 # Use Starship
 starship init fish | source
@@ -39,7 +39,6 @@ function fcd
     end
 end
 
-
 alias c="clear" 
 
 # ---- Eza (better ls) -----
@@ -56,7 +55,7 @@ function y
 end
 
 # ---- Bat (better cat) -----
-set -x BAT_THEME tokyonight_night
+set -x BAT_THEME gruvbox-dark
 
 # ---- Zoxide (better cd) -----
 zoxide init fish | source

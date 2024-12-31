@@ -1,51 +1,46 @@
 format = """
-[╭](fg:current_line)\
+$username\
+$hostname\
 $directory\
 $git_branch\
-$fill\
+$git_state\
+$git_status\
 $cmd_duration\
 $line_break\
-$character\
-"""
-
-palette = 'kanagawa'
-add_newline = true
-
-[palettes.kanagawa]
-foreground = '#dcd7ba'
-background = '#1f1f28'
-current_line = '#363646'
-primary = '#2a2a37'
-box = '#363646'
-red = '#e46876'
-green = '#98bb6c'
-yellow = '#dca561'
-blue = '#7fb4ca'
-purple = '#957fb8'
-orange = '#ffa066'
+$python\
+$character"""
 
 [directory]
-format = '[─](fg:current_line)[](fg:purple)[󰷏 ](fg:primary bg:purple)[](fg:purple bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
-truncation_length = 0
-
-[git_branch]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)[](fg:box)'
-symbol = ' '
-
-[fill]
-symbol = '─'
-style = 'fg:current_line'
-
-[cmd_duration]
-min_time = 500
-format = '[─](fg:current_line)[](fg:orange)[󰔛 ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
+style = "blue"
 
 [character]
-format = """
-[╰─$symbol](fg:current_line) """
-success_symbol = "[\\[I\\]](bold green)"
-error_symbol = "[\\[I\\]](bold green)"
-vicmd_symbol = "[\\[N\\]](bold blue)"
-vimcmd_replace_one_symbol = "[\\[R\\]](bold red)"
-vimcmd_replace_symbol = "[\\[R\\]](bold red)"
-vimcmd_visual_symbol = "[\\[V\\]](bold yellow)"
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
