@@ -31,7 +31,6 @@ return {
         "ts_ls",
         "prismals",
         "pyright",
-        -- "hls",
         "clangd",
       },
     })

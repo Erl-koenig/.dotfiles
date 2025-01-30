@@ -1,22 +1,31 @@
 return {
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup({
-        disable_background = true,
-        styles = {
-          italic = false,
-        },
-      })
-    end,
-  },
-  {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
+    lazy = false,
     config = function()
       vim.cmd("colorscheme gruvbox")
     end,
+  },
+  {
+    "olivercederborg/poimandres.nvim",
+    priority = 1000,
+    config = function()
+      require("poimandres").setup({})
+    end,
+    init = function() end,
+  },
+  {
+    "tiagovla/tokyodark.nvim",
+    opts = {},
+    config = function(_, opts)
+      require("tokyodark").setup(opts)
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function() end,
   },
   {
     "rebelot/kanagawa.nvim",
@@ -33,7 +42,6 @@ return {
   },
   {
     "scottmckendry/cyberdream.nvim",
-    lazy = false,
     priority = 1000,
     config = function()
       require("cyberdream").setup({
