@@ -4,8 +4,23 @@ end
 
 set fish_greeting
 
-# Vim key bindings enabled by default
+set -Ux fish_user_paths $HOME/.config/scripts $fish_user_paths
+
+# Vim key bindings 
 fish_hybrid_key_bindings
+
+# tmux-sessionizer with ctrl + f if line is empty, else autocomplete
+function smart_ctrl_f
+    if test (commandline) = ""
+        tmux-sessionizer
+        commandline -f repaint
+    else
+        commandline -f forward-char
+    end
+end
+
+bind -M insert \cf smart_ctrl_f
+bind -M default \cf smart_ctrl_f
 
 # Use Starship
 starship init fish | source
