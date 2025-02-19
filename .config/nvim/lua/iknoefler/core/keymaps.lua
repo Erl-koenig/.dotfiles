@@ -12,6 +12,9 @@ keymap.set("n", "x", '"_x', { desc = "Delete character" }) -- without changing r
 keymap.set("n", "<leader>w", ":w!<cr>")
 keymap.set("n", "<leader>q", ":q!<cr>")
 
+-- tmux
+keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
