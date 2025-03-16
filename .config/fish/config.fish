@@ -28,6 +28,8 @@ starship init fish | source
 # Editor and alias
 set -x EDITOR nvim
 alias vim nvim
+alias lg lazygit
+alias v "open $1 -a \"Cursor\""
 
 # ---- FZF -----
 fzf --fish | source
@@ -77,4 +79,5 @@ set -x BAT_THEME gruvbox-dark
 # ---- Zoxide (better cd) -----
 zoxide init fish | source
 alias cd="z"
+
 
