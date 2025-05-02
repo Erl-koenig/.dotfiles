@@ -33,6 +33,7 @@ return {
         "pyright",
         "clangd",
         "gopls",
+        "jdtls",
       },
     })
 
@@ -45,6 +46,7 @@ return {
         "pylint",
         "eslint_d",
         "codelldb",
+        "google-java-format",
       },
     })
   end,

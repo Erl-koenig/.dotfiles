@@ -4,7 +4,22 @@ return {
     priority = 1000,
     lazy = false,
     config = function()
-      vim.cmd("colorscheme gruvbox")
+    end,
+  },
+  {
+    "tiagovla/tokyodark.nvim",
+    priority = 1000,
+    config = function()
+      require("tokyodark").setup({})
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup({})
+      vim.cmd("colorscheme rose-pine-main")
     end,
   },
   {
@@ -13,19 +28,6 @@ return {
     config = function()
       require("poimandres").setup({})
     end,
-    init = function() end,
-  },
-  {
-    "tiagovla/tokyodark.nvim",
-    opts = {},
-    config = function(_, opts)
-      require("tokyodark").setup(opts)
-    end,
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function() end,
   },
   {
     "rebelot/kanagawa.nvim",
