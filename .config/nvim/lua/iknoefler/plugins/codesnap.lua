@@ -9,7 +9,6 @@ return {
   opts = {
     save_path = "~/Pictures",
     has_breadcrumbs = false, -- don't display filepath
-    -- bg_theme = "default",
     bg_color = "#535c68",
     watermark = "",
   },
