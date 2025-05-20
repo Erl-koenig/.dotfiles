@@ -6,7 +6,13 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = false },
-    indent = { enabled = false },
+    indent = {
+      enabled = true,
+      indent = {
+        priority = 1,
+        char = "┊",
+      },
+    },
     input = { enabled = true },
     picker = { enabled = true },
     notifier = { enabled = true },
@@ -15,5 +21,10 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    zen = {
+      toggles = {
+        dim = false,
+      },
+    },
   },
 }

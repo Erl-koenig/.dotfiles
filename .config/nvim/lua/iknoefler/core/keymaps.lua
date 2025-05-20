@@ -91,6 +91,23 @@ keymap.set("n", "<C-m>", function()
   harpoon_ui.nav_file(4)
 end, { desc = "Harpoon: Go to file 4" })
 
+-- Snacks
+keymap.set("n", "<leader>lg", function()
+  Snacks.lazygit()
+end, { desc = "Open lazygit" })
+
+keymap.set("n", "<leader>z", function()
+  Snacks.zen()
+end, { desc = "Toggle Zen Mode" })
+
+keymap.set("n", "<leader>Z", function()
+  Snacks.zen.zoom()
+end, { desc = "Toggle Zoom" })
+
+keymap.set("n", "<leader>gB", function()
+  Snacks.gitbrowse()
+end, { desc = "Git Browse" })
+
 -- other
 keymap.set({ "n" }, "<leader>md", "<cmd>RenderMarkdown toggle<cr>", { noremap = true, silent = true })
 
