@@ -8,17 +8,17 @@ yabai -m space 2 --label two
 yabai -m space 3 --label three
 yabai -m space 4 --label four
 yabai -m space 5 --label five
-yabai -m space 6 --label six 
+yabai -m space 6 --label six
 
 yabai -m rule --add app="^()$" space=one
-yabai -m rule --add app="^$" space=two
-yabai -m rule --add app="^(Ghostty|Kitty|Visual Studio Code)$" space=three
-yabai -m rule --add app="^()$" space=four
-yabai -m rule --add app="^$" space=five
+yabai -m rule --add app="^(Zen Browser)$" space=two
+yabai -m rule --add app="^(Ghostty)$" space=three
+yabai -m rule --add app="^(Mail)$" space=four
+yabai -m rule --add app="^Spotify$" space=five
 yabai -m rule --add app="^()$" space=six
 
-# Disable apps
-yabai -m rule --add app="^(Clock|App Store|Stickies|Calculator|AppCleaner|System Preferences|System Settings|Archive Utility|Finder)$" manage=off
+# Window rules
+yabai -m rule --add app="^(Clock|Raycast|App Store|Stickies|Calculator|AppCleaner|System Settings|Archive Utility|Finder)$" manage=off
 
 # Set all padding and gaps to 20pt (default: 0)
 yabai -m config top_padding    12
@@ -27,13 +27,13 @@ yabai -m config left_padding   12
 yabai -m config right_padding  12
 yabai -m config window_gap     12
 
-# External bar 
+# For external bar 
 # yabai -m config external_bar all:32:0
 
 # Useful optional stuff
 # yabai -m config focus_follows_mouse autofocus
 yabai -m config window_shadow float
-yabai -m config window_border_width 1
+yabai -m config window_border_width 1 
 yabai -m config active_window_border_color  0xBF999999
 
 # Drag/resizes Windows with mouse without having to grab the edges first by holding ctrl

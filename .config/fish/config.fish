@@ -80,4 +80,5 @@ set -x BAT_THEME gruvbox-dark
 zoxide init fish | source
 alias cd="z"
 
-
+# ---- OrbStack -----
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

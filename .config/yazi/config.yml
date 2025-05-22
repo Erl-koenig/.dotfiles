@@ -1,7 +1,0 @@
-# keymap:
-#   normal:
-#     o: zsh
-#
-[jobs]
-auto_start = true
-

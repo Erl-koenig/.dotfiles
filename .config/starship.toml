@@ -11,9 +11,6 @@ $character"""
 
 add_newline = false
 
-# Zwischen cmd_duration und python:
-# $line_break\
-
 [directory]
 style = "blue"
 
