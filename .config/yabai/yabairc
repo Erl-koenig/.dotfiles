@@ -28,7 +28,7 @@ yabai -m config right_padding  12
 yabai -m config window_gap     12
 
 # For external bar 
-# yabai -m config external_bar all:32:0
+yabai -m config external_bar all:32:0
 
 # Useful optional stuff
 # yabai -m config focus_follows_mouse autofocus
